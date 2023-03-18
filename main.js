@@ -253,7 +253,7 @@ function listenToUser(canvas) {
       console.log(x,y)
       using = true
       if (eraserEnabled) {
-        context.clearRect(x - 5, y - 5, 10, 10)
+        context.clearRect(x - 5, y - 5, 20, 20)
       } else {
         lastPoint = {
           "x": x,
