@@ -1,6 +1,6 @@
 var yyy = document.getElementById('xxx');
 var context = yyy.getContext('2d');
-var lineWidth = 5
+var lineWidth = 2.5
 
 autoSetCanvasSize(yyy)
 
@@ -172,13 +172,36 @@ lightcoral.onclick = function(){
   aqua.classList.remove('active')
 }
 
+fine.onclick = function(){
+  lineWidth = 2.5
+  fine.classList.add('active')
+  thin.classList.remove('active')
+  coarse.classList.remove('active')
+  thick.classList.remove('active')
 
+}
 thin.onclick = function(){
   lineWidth = 5
+  thin.classList.add('active')
+  fine.classList.remove('active')
+  coarse.classList.remove('active')
+  thick.classList.remove('active')
+}
+coarse.onclick = function(){
+  lineWidth = 7.5
+  coarse.classList.add('active')
+  fine.classList.remove('active')
+  thin.classList.remove('active')
+  thick.classList.remove('active')
 }
 thick.onclick = function(){
   lineWidth = 10
+  thick.classList.add('active')
+  fine.classList.remove('active')
+  thin.classList.remove('active')
+  coarse.classList.remove('active')
 }
+
 
 /******/
 
