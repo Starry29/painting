@@ -12,14 +12,19 @@ pen.onclick = function(){
   eraserEnabled = false
   pen.classList.add('active')
   eraser.classList.remove('active')
+  clear.classList.remove('active')
 }
 eraser.onclick = function(){
   eraserEnabled = true
   eraser.classList.add('active')
   pen.classList.remove('active')
+  clear.classList.remove('active')
 }
 clear.onclick = function(){
   context.clearRect(0, 0, yyy.width, yyy.height);
+  clear.classList.add('active')
+  eraser.classList.remove('active')
+  pen.classList.remove('active')
 }
 download.onclick = function(){
   var url = yyy.toDataURL("image/png")
