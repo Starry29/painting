@@ -26,33 +26,152 @@ download.onclick = function(){
   var a = document.createElement('a')
   document.body.appendChild(a)
   a.href = url
-  a.download = '我的画儿'
+  a.download = 'canvas'
   a.target = '_blank'
   a.click()
 }
 
-
+black.onclick = function(){
+  context.fillStyle = 'black'
+  context.strokeStyle = 'black'
+  black.classList.add('active')
+  red.classList.remove('active')
+  green.classList.remove('active')
+  blue.classList.remove('active')
+  pink.classList.remove('active')
+  purple.classList.remove('active')
+  yellow.classList.remove('active')
+  aqua.classList.remove('active')
+  lightcyan.classList.remove('active')
+  lightcoral.classList.remove('active')
+}
 red.onclick = function(){
   context.fillStyle = 'red'
   context.strokeStyle = 'red'
   red.classList.add('active')
+  black.classList.remove('active')
   green.classList.remove('active')
   blue.classList.remove('active')
+  pink.classList.remove('active')
+  purple.classList.remove('active')
+  yellow.classList.remove('active')
+  aqua.classList.remove('active')
+  lightcyan.classList.remove('active')
+  lightcoral.classList.remove('active')
 }
 green.onclick = function(){
   context.fillStyle = 'green'
   context.strokeStyle = 'green'
+  black.classList.remove('active')
   red.classList.remove('active')
   green.classList.add('active')
   blue.classList.remove('active')
+  pink.classList.remove('active')
+  purple.classList.remove('active')
+  yellow.classList.remove('active')
+  aqua.classList.remove('active')
+  lightcyan.classList.remove('active')
+  lightcoral.classList.remove('active')
 }
 blue.onclick = function(){
   context.fillStyle = 'blue'
   context.strokeStyle = 'blue'
+  black.classList.remove('active')
   red.classList.remove('active')
   green.classList.remove('active')
   blue.classList.add('active')
+  pink.classList.remove('active')
+  purple.classList.remove('active')
+  yellow.classList.remove('active')
+  aqua.classList.remove('active')
+  lightcyan.classList.remove('active')
+  lightcoral.classList.remove('active')
 }
+pink.onclick = function(){
+  context.fillStyle = 'pink'
+  context.strokeStyle = 'pink'
+  black.classList.remove('active')
+  red.classList.remove('active')
+  green.classList.remove('active')
+  pink.classList.add('active')
+  blue.classList.remove('active')
+  purple.classList.remove('active')
+  yellow.classList.remove('active')
+  aqua.classList.remove('active')
+  lightcyan.classList.remove('active')
+  lightcoral.classList.remove('active')
+}
+purple.onclick = function(){
+  context.fillStyle = 'purple'
+  context.strokeStyle = 'purple'
+  black.classList.remove('active')
+  red.classList.remove('active')
+  green.classList.remove('active')
+  purple.classList.add('active')
+  blue.classList.remove('active')
+  pink.classList.remove('active')
+  yellow.classList.remove('active')
+  aqua.classList.remove('active')
+  lightcyan.classList.remove('active')
+  lightcoral.classList.remove('active')
+}
+yellow.onclick = function(){
+  context.fillStyle = 'yellow'
+  context.strokeStyle = 'yellow'
+  black.classList.remove('active')
+  red.classList.remove('active')
+  green.classList.remove('active')
+  yellow.classList.add('active')
+  blue.classList.remove('active')
+  pink.classList.remove('active')
+  purple.classList.remove('active')
+  aqua.classList.remove('active')
+  lightcyan.classList.remove('active')
+  lightcoral.classList.remove('active')
+}
+aqua.onclick = function(){
+  context.fillStyle = 'aqua'
+  context.strokeStyle = 'aqua'
+  black.classList.remove('active')
+  red.classList.remove('active')
+  green.classList.remove('active')
+  aqua.classList.add('active')
+  blue.classList.remove('active')
+  pink.classList.remove('active')
+  purple.classList.remove('active')
+  yellow.classList.remove('active')
+  lightcyan.classList.remove('active')
+  lightcoral.classList.remove('active')
+}
+lightcyan.onclick = function(){
+  context.fillStyle = 'lightcyan'
+  context.strokeStyle = 'lightcyan'
+  black.classList.remove('active')
+  red.classList.remove('active')
+  green.classList.remove('active')
+  lightcyan.classList.add('active')
+  blue.classList.remove('active')
+  pink.classList.remove('active')
+  purple.classList.remove('active')
+  yellow.classList.remove('active')
+  aqua.classList.remove('active')
+  lightcoral.classList.remove('active')
+}
+lightcoral.onclick = function(){
+  context.fillStyle = 'lightcoral'
+  context.strokeStyle = 'lightcoral'
+  lightcoral.classList.add('active')
+  black.classList.remove('active')
+  red.classList.remove('active')
+  green.classList.remove('active')
+  lightcyan.classList.remove('active')
+  blue.classList.remove('active')
+  pink.classList.remove('active')
+  purple.classList.remove('active')
+  yellow.classList.remove('active')
+  aqua.classList.remove('active')
+}
+
 
 thin.onclick = function(){
   lineWidth = 5
@@ -120,7 +239,6 @@ function listenToUser(canvas) {
       }
     }
     canvas.ontouchmove = function(aaa){
-      console.log('边摸边动')
       var x = aaa.touches[0].clientX
       var y = aaa.touches[0].clientY
 
@@ -138,7 +256,6 @@ function listenToUser(canvas) {
       }
     }
     canvas.ontouchend = function(){
-      console.log('摸完了')
       using = false
     }
   }else{

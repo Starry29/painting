@@ -47,6 +47,9 @@ body{
   margin: 10px 0;
   transition: all 0.3s;
 }
+.colors> li.black{
+  background: black;
+}
 .colors> li.red{
   background: red;
 }
@@ -56,6 +59,25 @@ body{
 .colors> li.blue{
   background: blue;
 }
+.colors> li.pink{
+  background: pink;
+}
+.colors> li.purple{
+  background: purple;
+}
+.colors> li.yellow{
+  background: yellow;
+}
+.colors> li.aqua{
+  background: aqua;
+}
+.colors> li.lightcyan{
+  background: lightcyan;
+}
+.colors> li.lightcoral{
+  background: lightcoral;
+}
+
 .colors> li.active{
   box-shadow: 0 0 3px rgba(0,0,0,0.95);
   transform: scale(1.2);
