@@ -21,6 +21,7 @@ eraser.onclick = function(){
   clear.classList.remove('active')
 }
 clear.onclick = function(){
+  eraserEnabled = true
   context.clearRect(0, 0, yyy.width, yyy.height);
   clear.classList.add('active')
   eraser.classList.remove('active')
